@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmfn/node-aho-corasick-benchmarks/issues"
   },
-  "homepage": "https://github.com/jmfn/node-aho-corasick-benchmarks#readme"
+  "homepage": "https://github.com/jmfn/node-aho-corasick-benchmarks#readme",
+  "dependencies": {
+    "aho-corasick-node": "^1.0.2"
+  }
 }
