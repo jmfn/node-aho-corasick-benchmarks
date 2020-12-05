@@ -1,12 +1,8 @@
-Benchmark various aho-corasick libraries.
+Benchmark various aho-corasick node libraries.
+
+Run [benchmarks](./BENCHMARKS.md)
 
 ```
-$ node index.js <lib> <data-length>
-```
-
-Example
-
-```
-$ node index.js aho-corasick-node 500000
-Time: 23001 ms, result: 487666
+hyperfine --export-markdown BENCHMARKS.md --parameter-list lib aho-corasick-node,node-aho-corasick \
+  'node index.js {lib} 10000 10000'
 ```
