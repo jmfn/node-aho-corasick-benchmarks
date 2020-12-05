@@ -1,4 +1,6 @@
-const libraries = ['aho-corasick-node', 'node-aho-corasick'];
+// Supported libraries
+const { dependencies } = require('./package.json');
+const libraries = Object.keys(dependencies);
 
 function main(library, searchStrings, keywordLength) {
   if (!keywordLength) {
