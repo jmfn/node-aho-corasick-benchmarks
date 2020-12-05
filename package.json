@@ -19,6 +19,7 @@
   "dependencies": {
     "aho-corasick": "^0.1.3",
     "aho-corasick-node": "1.0.2",
+    "lazy-aho-corasick": "^1.2.2",
     "node-aho-corasick": "0.0.2"
   }
 }
