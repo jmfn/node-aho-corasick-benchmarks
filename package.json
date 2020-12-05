@@ -1,0 +1,19 @@
+{
+  "name": "aho-corasick-benchmarks",
+  "version": "1.0.0",
+  "description": "init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmfn/node-aho-corasick-benchmarks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmfn/node-aho-corasick-benchmarks/issues"
+  },
+  "homepage": "https://github.com/jmfn/node-aho-corasick-benchmarks#readme"
+}
