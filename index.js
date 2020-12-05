@@ -22,23 +22,38 @@ function main(library, searchStrings, keywordLength) {
   const lib = require(`./libs/${library}`).default;
 
   var timer = process.hrtime();
-  const result = lib(keywords, text);
+  const matches = lib(keywords, text);
   var timerEnd = process.hrtime(timer);
 
   console.log(
     `Time: ${Math.round(
       (timerEnd[0] * 1000000000 + timerEnd[1]) / 1000000,
       2
-    )} ms, result: ${result}`
+    )} ms, matches: ${matches}`
   );
 
   process.exit(0);
 }
 
 function generateData(length) {
+  // seedable generator
+  // https://stackoverflow.com/a/47593316
+  function xmur3(str) {
+    for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
+      (h = Math.imul(h ^ str.charCodeAt(i), 3432918353)),
+        (h = (h << 13) | (h >>> 19));
+    return function () {
+      h = Math.imul(h ^ (h >>> 16), 2246822507);
+      h = Math.imul(h ^ (h >>> 13), 3266489909);
+      return (h ^= h >>> 16) >>> 0;
+    };
+  }
+
+  const seed = xmur3('coffee');
+
   const data = [];
   for (let i = 0; i < length; i++) {
-    data.push(`${Math.round(Math.random() * 10000000000, 0)}`);
+    data.push(`${seed()}`);
   }
 
   return data;
