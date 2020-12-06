@@ -4,6 +4,6 @@ Run [benchmarks](./BENCHMARKS.md) for 100,000 keywords
 
 ```
 hyperfine --export-markdown BENCHMARKS.md \
-  --parameter-list lib aho-corasick-node,node-aho-corasick,aho-corasick,lazy-aho-corasick,@tanishiking/aho-corasick \
+  --parameter-list lib aho-corasick-node,node-aho-corasick,aho-corasick,lazy-aho-corasick,@tanishiking/aho-corasick,ahocorasick \
   'node index.js {lib} 10000'
 ```
