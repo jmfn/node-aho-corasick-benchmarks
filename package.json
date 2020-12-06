@@ -19,6 +19,7 @@
   "dependencies": {
     "@drorgl/aho-corasick2": "^1.0.3",
     "@tanishiking/aho-corasick": "^0.0.1",
+    "aca": "^0.1.12",
     "aho-corasick": "^0.1.3",
     "aho-corasick-node": "^1.0.2",
     "aho-corasick-search": "^1.0.0",
